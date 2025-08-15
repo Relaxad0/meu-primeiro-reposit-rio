@@ -1,0 +1,11 @@
+public class trabalho01 {
+    public static void main(String[] args) {
+        int numeroQuarto = 305; // quarto
+        double valorDiaria = 250.75; // diária
+        String nomeHospede = "Ywrguem Rhytcherd";
+
+        System.out.println("Número do Quarto: " + numeroQuarto);
+        System.out.println("Valor da Diária: R$ " + valorDiaria);
+        System.out.println("Nome do Hóspede: " + nomeHospede);
+    }
+}
