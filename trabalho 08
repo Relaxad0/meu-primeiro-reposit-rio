@@ -1,0 +1,33 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+public class trabalho08 {
+     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        ArrayList<Integer> pedidos = new ArrayList<>();
+
+        System.out.println("Digite os códigos dos pedidos (0 para sair):");
+        int codigo;
+        while ((codigo = sc.nextInt()) != 0) {
+            pedidos.add(codigo);
+        }
+
+        Map<Integer, Integer> contador = new HashMap<>();
+        for (int cod : pedidos) {
+            contador.put(cod, contador.getOrDefault(cod, 0) + 1);
+        }
+
+        int maisPedido = -1, qtd = 0;
+        for (Map.Entry<Integer, Integer> e : contador.entrySet()) {
+            if (e.getValue() > qtd) {
+                maisPedido = e.getKey();
+                qtd = e.getValue();
+            }
+        }
+
+        System.out.println("O item mais pedido foi: " + maisPedido + " (" + qtd + " vezes)");
+        sc.close();
+    }
+}
