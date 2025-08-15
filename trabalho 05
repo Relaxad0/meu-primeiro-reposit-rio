@@ -1,0 +1,14 @@
+public class trabalho05 {
+     public static void main(String[] args) {
+        double[] notas = {7.5, 9.2, 8.8, 6.7, 9.9};
+        double maior = notas[0];
+
+        for (double nota : notas) {
+            if (nota > maior) {
+                maior = nota;
+            }
+        }
+
+        System.out.println("A maior nota é: " + maior);
+    }
+}
